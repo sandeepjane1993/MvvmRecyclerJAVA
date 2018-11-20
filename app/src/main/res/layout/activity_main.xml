@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class = "ActivityMainBinding">
+        <variable
+            name="viewModel"
+            type="com.example.sande.mvvmrecyclerjava.viewmodel.MyViewModel"/>
+
+    </data>
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/recyclerView_TaskList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:adapter="@{viewModel.adapter}"
+        app:data="@{viewModel.taskData}"
+        tools:context=".MainActivity">
+
+    </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</layout>
